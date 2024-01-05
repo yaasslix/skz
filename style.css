@@ -1,0 +1,166 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0e6f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    background-color: #ffb6c1;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab button {
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ff9cb3;
+    transform: scale(1.05);
+}
+
+.tab button.active {
+    background-color: #ff8298;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.nested-tab {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nested-tab button {
+    background-color: #ffadd2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nested-tab button:hover {
+    background-color: #ff99c2;
+    transform: scale(1.05);
+}
+
+.nested-tabcontent {
+    display: none;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #fff0f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.album {
+    margin-bottom: 20px;
+    background-color: #fff0f5;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.album-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.album-slide {
+    display: none;
+    width: 100%;
+}
+
+.album-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.photocard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photocard {
+    flex: 0 1 calc(15% - 10px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #16213e; /* Fondo oscuro para las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photocard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.photocard img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .photocard {
+        flex: 0 1 calc(30% - 10px);
+    }
+
+    .tab button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
