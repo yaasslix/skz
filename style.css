@@ -38,10 +38,12 @@ body {
 }
 
 .tabcontent {
-    display: none;
-    padding: 20px;
-    animation: fadeIn 0.5s;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px; /* Espaciado alrededor del contenido */
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -159,5 +161,22 @@ body {
     .tab button {
         padding: 8px 10px;
         font-size: 14px;
+    }
+}
+.album, .photocard {
+    /* otros estilos que ya tengas */
+    width: auto; /* Ajustar al ancho de la columna del grid */
+}
+
+
+@media (max-width: 768px) {
+    .tabcontent {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tabcontent {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
     }
 }
