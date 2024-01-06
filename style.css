@@ -47,7 +47,7 @@ body {
 
 /* Estilo para Álbumes y Photocards */
 .album, .nested-tabcontent .photocard {
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 0 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
     background-color: #fff0f5;
     padding: 10px;
