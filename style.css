@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Fuente principal para el cuerpo */
     background-color: #f3eaf8; /* Fondo en tono rosa pastel */
     color: #6a4b7b; /* Color de texto en tono morado suave */
     margin: 0;
@@ -7,12 +7,9 @@ body {
     line-height: 1.6;
 }
 
-/* Usar una fuente redondeada para los títulos */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
-
 h2, h4, h5 {
-    font-family: 'Baloo 2', cursive; /* Fuente redondeada */
-    font-size: 1.5em; /* Tamaño más grande */
+    font-family: Arial, sans-serif; /* Cambiar a una fuente estándar y más legible */
+    font-size: 1.5em; /* Tamaño más grande para los títulos */
     text-align: center;
     color: #9954bb; /* Color morado para los títulos */
     margin: 0.5em 0;
