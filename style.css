@@ -38,15 +38,15 @@ body {
 }
 
 /* Estilo del Contenido de los Tabs (Álbumes y Photocards) */
-.tabcontent, .nested-tabcontent {
+.tabcontent {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
 }
 
-/* Estilo para Álbumes y Photocards */
-.album, .photocard {
+/* Estilo para Álbumes, Photocard-POB y Photocard-ALBUM */
+.tabcontent > div {
     flex: 1 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
     background-color: #fff0f5;
@@ -56,29 +56,21 @@ body {
     overflow: hidden;
 }
 
-.album img, .photocard img {
+.tabcontent > div img {
     width: 100%;
     height: auto;
 }
 
 /* Estilos para Responsive Design */
 @media (max-width: 768px) {
-    .tabcontent, .nested-tabcontent {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .album, .photocard {
+    .tabcontent > div {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .tabcontent, .nested-tabcontent {
-        grid-template-columns: 1fr;
-    }
-
-    .album, .photocard {
+    .tabcontent > div {
         flex: 1 1 100%;
         max-width: 100%;
     }
