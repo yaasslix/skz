@@ -38,7 +38,7 @@ body {
 }
 
 /* Estilo del Contenido de los Tabs (Álbumes y Photocards) */
-.tabcontent {
+.tabcontent, .nested-tabcontent {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -46,7 +46,7 @@ body {
 }
 
 /* Estilo para Álbumes y Photocards */
-.album, .photocard {
+.album, .nested-tabcontent .photocard {
     flex: 1 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
     background-color: #fff0f5;
@@ -59,18 +59,17 @@ body {
 .album img, .photocard img {
     width: 100%;
     height: auto;
-}
-
+}  
 /* Estilos para Responsive Design */
 @media (max-width: 768px) {
-    .album, .photocard {
+    .album, .nested-tabcontent .photocard {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .album, .photocard {
+    .album, .nested-tabcontent .photocard {
         flex: 1 1 100%;
         max-width: 100%;
     }
