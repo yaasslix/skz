@@ -37,7 +37,7 @@ body {
     background-color: #ff8298;
 }
 
-/* Estilo del Contenido de los Tabs (Albumes y Photocards) */
+/* Estilo del Contenido de los Tabs (Álbumes y Photocards) */
 .tabcontent {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
@@ -45,22 +45,25 @@ body {
     padding: 20px; /* Espaciado alrededor del contenido */
 }
 
-/* Estilo para Albumes y Photocards */
+/* Estilo para Álbumes y Photocards */
 .album, .photocard {
     background-color: #fff0f5;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.album img, .photocard img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
 }
 
 /* Estilos para Responsive Design */
 @media (max-width: 768px) {
     .tabcontent {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-    }
-    .tab button {
-        padding: 8px 10px;
-        font-size: 14px;
     }
 }
 
