@@ -37,13 +37,13 @@ body {
     background-color: #ff8298;
 }
 
-/* Estilo del Contenido de los Tabs (Álbumes y Photocards) */
-.tabcontent, .nested-tabcontent {
+.tabcontent {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
 }
+
 
 /* Estilo para Álbumes y Photocards */
 .album, .nested-tabcontent .photocard {
